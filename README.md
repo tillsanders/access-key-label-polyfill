@@ -28,6 +28,8 @@ we're good, right? Alas, not quite. Though the API has been around for years,
 Chrome is still missing out. To help bridge the gap, you can use this polyfill and finally let your
 users benefit from the keyboard shortcuts you provide!
 
+[**Demo**](https://tillsanders.github.io/access-key-label-polyfill/)
+
 ## Usage
 
 ### NPM
@@ -62,6 +64,13 @@ You can also use this polyfill 'oldschool'. Simply download the demo files and a
     accessKeyLabelPolyfill(); // lowerCamelCase!
   </script>
 ```
+
+## Demo
+
+You can view the demo here: <https://tillsanders.github.io/access-key-label-polyfill/>
+
+The demo will tell you wether the polyfill detected native support for `accessKeyLabel` or not and
+will display either output below the button.
 
 ## How does it work?
 
