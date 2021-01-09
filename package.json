@@ -17,6 +17,9 @@
     "type": "git",
     "url": "git+https://github.com/tillsanders/access-key-label-polyfill.git"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "polyfill",
     "accessKeyLabel",
