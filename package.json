@@ -1,0 +1,47 @@
+{
+  "name": "access-key-label-polyfill",
+  "version": "0.1.0",
+  "description": "Polyfills the accessKeyLabel property to improve discoverability of native keyboard shortcuts for your website. Tiny (< 1KB) and dependency-free.",
+  "main": "dist/AccessKeyLabelPolyfill.js",
+  "source": "src/AccessKeyLabelPolyfill.ts",
+  "exports": "dist/AccessKeyLabelPolyfill.modern.js",
+  "module": "dist/AccessKeyLabelPolyfill.module.js",
+  "unpkg": "dist/AccessKeyLabelPolyfill.umd.js",
+  "scripts": {
+    "lint": "eslint src/**/*",
+    "test": "jest",
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tillsanders/access-key-label-polyfill.git"
+  },
+  "keywords": [
+    "polyfill",
+    "accessKeyLabel",
+    "a11y",
+    "browser"
+  ],
+  "author": "Till Sanders <mail@till-sanders.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tillsanders/access-key-label-polyfill/issues"
+  },
+  "homepage": "https://github.com/tillsanders/access-key-label-polyfill#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-typescript": "^7.12.7",
+    "@types/jest": "^26.0.20",
+    "@typescript-eslint/eslint-plugin": "^4.12.0",
+    "@typescript-eslint/parser": "^4.12.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.3",
+    "microbundle": "^0.13.0",
+    "ts-node": "^9.1.1"
+  }
+}
