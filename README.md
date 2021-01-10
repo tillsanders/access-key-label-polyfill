@@ -29,6 +29,7 @@ Chrome is still missing out. To help bridge the gap, you can use this polyfill a
 users benefit from the keyboard shortcuts you provide!
 
 [**Demo**](https://tillsanders.github.io/access-key-label-polyfill/)
+
 [**Full length article** about accessKey and accessKeyLabel on dev.to](https://dev.to/tillsanders/boy-was-it-hard-to-implement-proper-keyboard-shortcuts-4d72)
 
 ## Usage
