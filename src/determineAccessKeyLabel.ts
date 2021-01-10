@@ -13,7 +13,7 @@ export default function determineAccessKeyLabel(ua: string): string | undefined 
   }
 
   // Internet Explorer / Edge
-  if (ua.match(/msie|trident/i) || ua.match(/\sedge/i)) {
+  if (ua.match(/msie|trident/i) || ua.match(/\sedg/i)) {
     return 'Alt + ';
   }
 

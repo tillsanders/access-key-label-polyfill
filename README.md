@@ -29,6 +29,7 @@ Chrome is still missing out. To help bridge the gap, you can use this polyfill a
 users benefit from the keyboard shortcuts you provide!
 
 [**Demo**](https://tillsanders.github.io/access-key-label-polyfill/)
+[**Full length article** about accessKey and accessKeyLabel on dev.to](https://dev.to/tillsanders/boy-was-it-hard-to-implement-proper-keyboard-shortcuts-4d72)
 
 ## Usage
 
@@ -91,3 +92,13 @@ return the correct label. You can then use `accessKeyLabel` as expected.
   so please feel free to open an issue if you come across an unsupported case.
 - Chrome on Android does not seem to support `accessKey`, or at least, I was unable to guess (why
   is this not documented anywhere?!) the correct modifier keys. Would love to get help with this!
+
+# Changelog
+
+## 0.1.1 – (10.01.2021)
+
+- Fix browser detection of Edge
+
+## 0.1.0 – (09.01.2021)
+
+- Initial implementation
