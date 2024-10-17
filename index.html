@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AccessKeyLabelPolyfill, Demo</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <script module src="../src/AccessKeyLabelPolyfill.ts"></script>
+    <link rel="stylesheet" href="./demo/styles.css" />
+    <script type="module" src="/src/AccessKeyLabelPolyfill.ts"></script>
   </head>
   <body>
     <main>
@@ -34,9 +34,13 @@
       button.parentNode.insertBefore(support, button.nextSibling);
 
       // Display accesskey hint below button
-      var hint = document.createElement("span");
-      hint.innerText = button.accessKeyLabel;
-      button.parentNode.insertBefore(hint, button.nextSibling);
+      document.onreadystatechange = () => {
+        if (document.readyState === "complete") {
+          var hint = document.createElement("span");
+          hint.innerText = button.accessKeyLabel;
+          button.parentNode.insertBefore(hint, button.nextSibling);
+        }
+      };
     </script>
   </body>
 </html>

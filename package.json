@@ -18,7 +18,7 @@
     "lint": "eslint .",
     "prettier": "prettier --write .",
     "test": "vitest run",
-    "demo": "vite ./demo"
+    "demo": "vite"
   },
   "repository": {
     "type": "git",
