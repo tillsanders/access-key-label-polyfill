@@ -4,48 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AccessKeyLabelPolyfill, Demo</title>
-  <style>
-    html {
-      font-family: sans-serif;
-      color: #333;
-      line-height: 1.4;
-    }
-    main {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      padding: 1em;
-    }
-    button {
-      font-size: 2em;
-      padding: 0.875em 1em;
-      appearance: none;
-      border: 1px solid #EEE;
-      border-radius: 5px;
-    }
-    span {
-      display: block;
-      padding: 1em;
-    }
-    p {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      border-radius: 5px;
-      padding: 0.75em;
-      max-width: 30rem;
-      color: #FFF;
-      margin: 0;
-    }
-    p.supported {
-      background-color: #2ECC71;
-    }
-    p.unsupported {
-      background-color: #E67E22;
-    }
-  </style>
+  <link rel="stylesheet" href="./styles.css">
+  <script module src="../src/AccessKeyLabelPolyfill.ts"></script>
 </head>
 <body>
   <main>
@@ -53,16 +13,8 @@
     <p></p>
   </main>
   <script>
-    var button = document.querySelector('button');
-
-    function displayAccessKeyHint() {
-      // Display accesskey hint below button
-      var hint = document.createElement('span');
-      hint.innerText = button.accessKeyLabel
-      button.parentNode.insertBefore(hint, button.nextSibling);
-    }
-
     // Check for browser support
+    var button = document.querySelector('button');
     var support = document.createElement('p');
     var supported = !!Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'accessKeyLabel')
     if (supported) {
@@ -74,20 +26,10 @@
     }
     button.parentNode.insertBefore(support, button.nextSibling);
 
-    if (!supported) {
-      // Load polyfill
-      var polyfill = document.createElement('script');
-      polyfill.src = './AccessKeyLabelPolyfill.umd.js';
-      polyfill.async = false;
-      polyfill.onload = function () {
-        accessKeyLabelPolyfill();
-        displayAccessKeyHint();
-      }
-      var head = document.head || document.getElementsByTagName('head')[0];
-      head.insertBefore(polyfill, head.firstChild);
-    } else {
-      displayAccessKeyHint();
-    }
+    // Display accesskey hint below button
+    var hint = document.createElement('span');
+    hint.innerText = button.accessKeyLabel
+    button.parentNode.insertBefore(hint, button.nextSibling);
   </script>
 </body>
 </html>

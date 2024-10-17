@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import determineAccessKeyLabel from '../src/determineAccessKeyLabel';
 import installAccessKeyLabelPolyfill from '../src/AccessKeyLabelPolyfill';
 

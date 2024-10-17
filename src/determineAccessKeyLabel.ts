@@ -5,7 +5,7 @@ export default function determineAccessKeyLabel(ua: string): string | undefined 
     if (ua.match(/firefox/i)) {
       const firefoxVersion = ua.match(/firefox[\s/](\d+)/i);
       // Firefox < v14
-      if (firefoxVersion[1] && parseInt(firefoxVersion[1], 10) < 14) {
+      if (firefoxVersion && firefoxVersion[1] && parseInt(firefoxVersion[1], 10) < 14) {
         return '⌃';
       }
     }

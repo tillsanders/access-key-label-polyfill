@@ -1,4 +1,4 @@
-import determineAccessKeyLabel from './determineAccessKeyLabel';
+import determineAccessKeyLabel from './determineAccessKeyLabel.js';
 
 export default function installAccessKeyLabelPolyfill() {
   // Exit if browser already supports accessKeyLabel

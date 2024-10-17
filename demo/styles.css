@@ -1,0 +1,40 @@
+html {
+  font-family: sans-serif;
+  color: #333;
+  line-height: 1.4;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1em;
+}
+button {
+  font-size: 2em;
+  padding: 0.875em 1em;
+  appearance: none;
+  border: 1px solid #EEE;
+  border-radius: 5px;
+}
+span {
+  display: block;
+  padding: 1em;
+}
+p {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  border-radius: 5px;
+  padding: 0.75em;
+  max-width: 30rem;
+  color: #FFF;
+  margin: 0;
+}
+p.supported {
+  background-color: #2ECC71;
+}
+p.unsupported {
+  background-color: #E67E22;
+}
