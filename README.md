@@ -47,24 +47,20 @@ yarn add access-key-label-polyfill
 And the import and run the install function:
 
 ```javascript
-import installAccessKeyLabelPolyfill from "access-key-label-polyfill";
-installAccessKeyLabelPolyfill();
+import "access-key-label-polyfill";
 ```
 
-Note: CJS, UMD and ESM are available, just take a look in the package.
+Note: Starting with v1.0.0, this polyfill is a native ES module.
 
 ### Browser
 
-You can also use this polyfill 'oldschool'. Simply download the demo files and add the
-`AccessKeyLabelPolyfill.umd.js` file to your body:
+You can also use this polyfill 'oldschool'. Simply download the package files and add a script tag
+to your body:
 
 ```html
 <body>
   <!-- ... -->
-  <script src="path/to/AccessKeyLabelPolyfill.umd.js"></script>
-  <script>
-    accessKeyLabelPolyfill(); // lowerCamelCase!
-  </script>
+  <script type="module" src="path/to/AccessKeyLabelPolyfill.js"></script>
 </body>
 ```
 
@@ -96,6 +92,16 @@ return the correct label. You can then use `accessKeyLabel` as expected.
   is this not documented anywhere?!) the correct modifier keys. Would love to get help with this!
 
 # Changelog
+
+## 1.0.0 – (17.10.2024)
+
+- BREAKING: Convert to native ESM module (remove UMD support)
+- BREAKING: Remove installation function (`accessKeyLabelPolyfill()`) and install automatically instead
+- Add support for Chrome on Windows
+- Update dependencies and overhaul tooling
+- Improve CI/CD
+- Move to Vite + Vitest
+- Update demo and documentation
 
 ## 0.1.1 – (10.01.2021)
 
