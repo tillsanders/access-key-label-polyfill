@@ -15,7 +15,7 @@ button {
   font-size: 2em;
   padding: 0.875em 1em;
   appearance: none;
-  border: 1px solid #EEE;
+  border: 1px solid #eee;
   border-radius: 5px;
 }
 span {
@@ -29,12 +29,12 @@ p {
   border-radius: 5px;
   padding: 0.75em;
   max-width: 30rem;
-  color: #FFF;
+  color: #fff;
   margin: 0;
 }
 p.supported {
-  background-color: #2ECC71;
+  background-color: #2ecc71;
 }
 p.unsupported {
-  background-color: #E67E22;
+  background-color: #e67e22;
 }

@@ -47,7 +47,7 @@ yarn add access-key-label-polyfill
 And the import and run the install function:
 
 ```javascript
-import installAccessKeyLabelPolyfill from 'access-key-label-polyfill';
+import installAccessKeyLabelPolyfill from "access-key-label-polyfill";
 installAccessKeyLabelPolyfill();
 ```
 
@@ -65,6 +65,7 @@ You can also use this polyfill 'oldschool'. Simply download the demo files and a
   <script>
     accessKeyLabelPolyfill(); // lowerCamelCase!
   </script>
+</body>
 ```
 
 ## Demo

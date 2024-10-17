@@ -1,35 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AccessKeyLabelPolyfill, Demo</title>
-  <link rel="stylesheet" href="./styles.css">
-  <script module src="../src/AccessKeyLabelPolyfill.ts"></script>
-</head>
-<body>
-  <main>
-    <button accesskey="p" onclick="alert('Geronimooooo!')"><u>P</u>ress me</button>
-    <p></p>
-  </main>
-  <script>
-    // Check for browser support
-    var button = document.querySelector('button');
-    var support = document.createElement('p');
-    var supported = !!Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'accessKeyLabel')
-    if (supported) {
-      support.classList = 'supported'
-      support.innerText = 'Your browser already supports the accessKeyLabel property, so this polyfill will not do anything here.'
-    } else {
-      support.classList = 'unsupported'
-      support.innerText = 'Your browser does not support the accessKeyLabel property, so this polyfill will take action.'
-    }
-    button.parentNode.insertBefore(support, button.nextSibling);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AccessKeyLabelPolyfill, Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script module src="../src/AccessKeyLabelPolyfill.ts"></script>
+  </head>
+  <body>
+    <main>
+      <button accesskey="p" onclick="alert('Geronimooooo!')">
+        <u>P</u>ress me
+      </button>
+      <p></p>
+    </main>
+    <script>
+      // Check for browser support
+      var button = document.querySelector("button");
+      var support = document.createElement("p");
+      var supported = !!Object.getOwnPropertyDescriptor(
+        HTMLElement.prototype,
+        "accessKeyLabel",
+      );
+      if (supported) {
+        support.classList = "supported";
+        support.innerText =
+          "Your browser already supports the accessKeyLabel property, so this polyfill will not do anything here.";
+      } else {
+        support.classList = "unsupported";
+        support.innerText =
+          "Your browser does not support the accessKeyLabel property, so this polyfill will take action.";
+      }
+      button.parentNode.insertBefore(support, button.nextSibling);
 
-    // Display accesskey hint below button
-    var hint = document.createElement('span');
-    hint.innerText = button.accessKeyLabel
-    button.parentNode.insertBefore(hint, button.nextSibling);
-  </script>
-</body>
+      // Display accesskey hint below button
+      var hint = document.createElement("span");
+      hint.innerText = button.accessKeyLabel;
+      button.parentNode.insertBefore(hint, button.nextSibling);
+    </script>
+  </body>
 </html>

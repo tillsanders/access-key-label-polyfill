@@ -1,8 +1,15 @@
-import determineAccessKeyLabel from './determineAccessKeyLabel.js';
+import determineAccessKeyLabel from "./determineAccessKeyLabel.js";
 
-export default function installAccessKeyLabelPolyfill() {
+function installAccessKeyLabelPolyfill() {
+  // Exit if not in browser context
+  if (typeof window === "undefined") {
+    return;
+  }
+
   // Exit if browser already supports accessKeyLabel
-  if (Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'accessKeyLabel')) {
+  if (
+    Object.getOwnPropertyDescriptor(HTMLElement.prototype, "accessKeyLabel")
+  ) {
     return;
   }
 
@@ -10,8 +17,7 @@ export default function installAccessKeyLabelPolyfill() {
   const modifiers = determineAccessKeyLabel(window.navigator.userAgent);
 
   // Attach polyfill
-  Object.defineProperty(HTMLElement.prototype, 'accessKeyLabel', {
-    // eslint-disable-next-line no-unused-vars
+  Object.defineProperty(HTMLElement.prototype, "accessKeyLabel", {
     get(this: HTMLElement) {
       if (!this.accessKey || !modifiers) {
         return undefined;
@@ -22,3 +28,5 @@ export default function installAccessKeyLabelPolyfill() {
     configurable: true,
   });
 }
+
+installAccessKeyLabelPolyfill();
