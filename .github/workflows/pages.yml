@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build with Vite
-        run: npx vite build --outDir ./demo/dist
+        run: npx vite build --outDir ./demo/dist --base access-key-label-polyfill
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
