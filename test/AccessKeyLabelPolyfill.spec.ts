@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import determineAccessKeyLabel from "../src/determineAccessKeyLabel";
+import determineAccessKeyLabel from "../src/determineAccessKeyLabel.ts";
 import "../src/AccessKeyLabelPolyfill";
 
 describe("AccessKeyLabelPolyfill", () => {
@@ -38,6 +38,16 @@ describe("AccessKeyLabelPolyfill", () => {
       {
         // Windows, Edge
         test: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edg/18.17763",
+        expectedModifiers: "Alt + ",
+      },
+      {
+        // Window 11, Edge 129
+        test: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0",
+        expectedModifiers: "Alt + ",
+      },
+      {
+        // Windows 11, Chrome 129
+        test: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
         expectedModifiers: "Alt + ",
       },
       {

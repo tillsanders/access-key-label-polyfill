@@ -23,6 +23,12 @@ export default function determineAccessKeyLabel(
     return "Alt + ";
   }
 
+  if (ua.match(/windows/i)) {
+    if (ua.match(/chrome/i)) {
+      return "Alt + ";
+    }
+  }
+
   // iOS / iPadOS
   if (ua.match(/(ipod|iphone|ipad)/i)) {
     // accessKeyLabel is supported > v14, but we're not checking for versions here, since we use
