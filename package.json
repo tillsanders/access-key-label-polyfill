@@ -1,6 +1,6 @@
 {
   "name": "access-key-label-polyfill",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Polyfills the accessKeyLabel property to improve discoverability of native keyboard shortcuts for your website. Tiny (< 1KB) and dependency-free.",
   "type": "module",
   "exports": {
