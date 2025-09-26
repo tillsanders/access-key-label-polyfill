@@ -1,7 +1,14 @@
 # AccessKeyLabelPolyfill
 
-> Polyfills the accessKeyLabel property to improve discoverability of native keyboard shortcuts for
-> your website. Tiny (< 1KB) and dependency-free.
+Polyfills the accessKeyLabel property to improve discoverability of native keyboard shortcuts for
+your website. Tiny (< 1KB) and dependency-free.
+
+[![Version npm](https://img.shields.io/npm/v/access-key-label-polyfill.svg)](https://www.npmjs.com/package/access-key-label-polyfill)
+[![Tests](https://img.shields.io/github/actions/workflow/status/tillsanders/access-key-label-polyfill/test.yml?branch=main&label=Tests)](https://github.com/tillsanders/access-key-label-polyfill/actions?query=workflow%3Atest+branch%3Amain)
+[![JSR](https://jsr.io/badges/@tillsanders/access-key-label-polyfill)](https://jsr.io/@tillsanders/access-key-label-polyfill)
+[![JSR Score](https://jsr.io/badges/@tillsanders/access-key-label-polyfill/score)](https://jsr.io/@tillsanders/access-key-label-polyfill)
+
+## Background
 
 With the [`accesskey` HTML property](https://developer.mozilla.org/de/docs/Web/HTML/Globale_Attribute/accesskey),
 you can easily provide keyboard shortcuts for the buttons of your web application.
@@ -92,6 +99,12 @@ return the correct label. You can then use `accessKeyLabel` as expected.
   is this not documented anywhere?!) the correct modifier keys. Would love to get help with this!
 
 # Changelog
+
+## 1.0.1 – (26.09.2025)
+
+- Update (development) dependencies
+- Use OIDC for trusted publishing to NPM
+- Set up JSR
 
 ## 1.0.0 – (17.10.2024)
 

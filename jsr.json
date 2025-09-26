@@ -1,0 +1,20 @@
+{
+  "name": "@tillsanders/access-key-label-polyfill",
+  "version": "1.0.1",
+  "license": "MIT",
+  "exports": "./src/AccessKeyLabelPolyfill.ts",
+  "publish": {
+    "exclude": [
+      ".github",
+      ".vscode",
+      "coverage",
+      "demo",
+      "dist",
+      "test",
+      ".prettierignore",
+      "eslint.config.js",
+      "tsconfig.json",
+      "vitest.config.ts"
+    ]
+  }
+}
