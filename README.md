@@ -100,6 +100,10 @@ return the correct label. You can then use `accessKeyLabel` as expected.
 
 # Changelog
 
+## 1.0.2 - (26.09.2025)
+
+- Fix GitHub Actions workflow for publishing
+
 ## 1.0.1 – (26.09.2025)
 
 - Update (development) dependencies
